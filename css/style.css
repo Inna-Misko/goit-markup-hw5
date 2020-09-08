@@ -108,6 +108,7 @@ a {
 }
 
 .site-nav .nav-link {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -115,6 +116,17 @@ a {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+}
+
+.current:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
 }
 
 .nav-link:hover,
@@ -305,6 +317,7 @@ a {
 }
 
 .work-list {
+  height: 294px;
   padding-right: 0px;
   padding-left: 0px;
 }
@@ -312,10 +325,39 @@ a {
 .work-item {
   width: calc((100% - 30px * 2) / 3);
   margin-right: 30px;
+
+  position: relative;
 }
 
 .team-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.work-text-box {
+  position: absolute;
+  bottom: 0;
+
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.work-text {
+  margin: 0px;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
 }
 
 /* Stuff */
